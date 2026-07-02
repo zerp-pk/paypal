@@ -4,7 +4,7 @@ namespace Zerp\Paypal\Events;
 
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
-use Workdo\LaundryManagement\Models\LaundryRequest;
+use Zerp\LaundryManagement\Models\LaundryRequest;
 
 class LaundryBookingPaymentPaypal
 {

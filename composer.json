@@ -1,6 +1,6 @@
 {
     "name": "zerp/paypal",
-    "description": "Description for paypal package",
+    "description": "PayPal payment gateway integration module for the Zerp ERP platform",
     "type": "library",
     "license": "MIT",
     "require": {},

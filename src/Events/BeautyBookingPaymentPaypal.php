@@ -4,7 +4,7 @@ namespace Zerp\Paypal\Events;
 
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
-use Workdo\BeautySpaManagement\Models\BeautyBooking;
+use Zerp\BeautySpaManagement\Models\BeautyBooking;
 
 class BeautyBookingPaymentPaypal
 {

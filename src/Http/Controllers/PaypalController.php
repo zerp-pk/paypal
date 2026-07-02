@@ -13,25 +13,25 @@ use Illuminate\Support\Facades\Session;
 use Zerp\Paypal\Events\PaypalPaymentStatus;
 use Inertia\Inertia;
 use Srmklive\PayPal\Services\PayPal as PayPalClient;
-use Workdo\Bookings\Models\BookingAppointment;
-use Workdo\Bookings\Models\BookingPackage;
-use Workdo\Bookings\Models\BookingCustomer;
+use Zerp\Bookings\Models\BookingAppointment;
+use Zerp\Bookings\Models\BookingPackage;
+use Zerp\Bookings\Models\BookingCustomer;
 
-use Workdo\LMS\Models\LMSCart;
-use Workdo\LMS\Models\LMSOrder;
-use Workdo\LMS\Models\LMSOrderItem;
-use Workdo\LMS\Models\LMSCoupon;
+use Zerp\LMS\Models\LMSCart;
+use Zerp\LMS\Models\LMSOrder;
+use Zerp\LMS\Models\LMSOrderItem;
+use Zerp\LMS\Models\LMSCoupon;
 use Illuminate\Support\Facades\Log;
-use Workdo\BeautySpaManagement\Models\BeautyBooking;
-use Workdo\BeautySpaManagement\Models\BeautyService;
-use Workdo\BeautySpaManagement\Models\BeautyBookingReceipt;
-use Workdo\ParkingManagement\Models\ParkingBooking;
+use Zerp\BeautySpaManagement\Models\BeautyBooking;
+use Zerp\BeautySpaManagement\Models\BeautyService;
+use Zerp\BeautySpaManagement\Models\BeautyBookingReceipt;
+use Zerp\ParkingManagement\Models\ParkingBooking;
 use Zerp\Paypal\Events\BeautyBookingPaymentPaypal;
 use Zerp\Paypal\Events\ParkingBookingPaymentPaypal;
 use Zerp\Paypal\Events\LaundryBookingPaymentPaypal;
-use Workdo\EventsManagement\Models\Event;
-use Workdo\EventsManagement\Models\EventBooking;
-use Workdo\EventsManagement\Models\EventBookingPayment;
+use Zerp\EventsManagement\Models\Event;
+use Zerp\EventsManagement\Models\EventBooking;
+use Zerp\EventsManagement\Models\EventBookingPayment;
 
 class PaypalController extends Controller
 {
@@ -1103,7 +1103,7 @@ class PaypalController extends Controller
                 $response = $provider->capturePaymentOrder($request->token);
 
                 if (isset($response['status']) && $response['status'] == 'COMPLETED') {
-                    $booking = new \Workdo\LaundryManagement\Models\LaundryRequest();
+                    $booking = new \Zerp\LaundryManagement\Models\LaundryRequest();
                     $booking->name = $bookingData['name'];
                     $booking->email = $bookingData['email'];
                     $booking->phone = $bookingData['phone'];
