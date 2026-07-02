@@ -1,0 +1,29 @@
+{
+    "name": "zerp/paypal",
+    "description": "Description for paypal package",
+    "type": "library",
+    "license": "MIT",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Zerp\\Paypal\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ZAWAT OFFICIALS PVT LTD",
+            "email": "zawatofficials@gmail.com"
+        },
+        {
+            "name": "HafizMMoaz",
+            "email": "hafizmoazkhalid@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Zerp\\Paypal\\Providers\\PaypalServiceProvider"
+            ]
+        }
+    }
+}
